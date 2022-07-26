@@ -1,7 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Sticker} from "../shared/models/sticker.model";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {DateService} from "../services/date.service";
 import {UserService} from "../services/user.service";
 
 
@@ -13,7 +12,7 @@ import {UserService} from "../services/user.service";
 export class InfoComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<InfoComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Sticker, public dateService: DateService, private userService: UserService) {
+              @Inject(MAT_DIALOG_DATA) public data: Sticker, private userService: UserService) {
   }
 
   edition(): string {

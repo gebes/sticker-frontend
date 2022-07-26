@@ -3,11 +3,11 @@
   <p><b>Beschreibung: </b>{{data.location_description}}</p>
   <p><b>Edition: </b>{{edition()}}</p>
   <p><b>Finder: </b>{{data.edges.owner.name}}</p>
-  <p><b>Datum: </b>{{dateService.formatDate(data.created_at)}}</p>
+  <p><b>Datum: </b>{{data.created_at | date: "dd.MM.YYYY"}}</p>
 </mat-dialog-content>
 <mat-dialog-actions>
   <div>
-  <button mat-button  *ngIf="canDelete()" [mat-dialog-close]="null">Löschen</button>
+    <button mat-button *ngIf="canDelete()" [mat-dialog-close]="null">Löschen</button>
   </div>
 
   <button mat-button (click)="onOkClick()" cdkFocusInitial>Ok</button>
