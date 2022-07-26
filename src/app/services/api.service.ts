@@ -30,7 +30,6 @@ export class ApiService {
   }
 
   private async callApi<T>(route: string, init: RequestInit = {}): Promise<T> {
-    //await new Promise(resolve => setTimeout(resolve, 300));
     if (init.headers == null) {
       init.headers = this._defaultHeaderProvider()
     }
