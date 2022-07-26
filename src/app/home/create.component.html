@@ -1,0 +1,55 @@
+<app-nav>
+  <mat-progress-bar class="app-nav-mat-progress-bar" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  <div class="wrapper" [ngClass]="{'disabled': loading}">
+    <h1>Neuen Marker erstellen</h1>
+    <div class="marker">
+      <mat-card class="rounded-mat-card">
+        <mat-card-title-group>
+          <mat-card-title>Sticker Information</mat-card-title>
+        </mat-card-title-group>
+        <mat-card-content>
+          <form [formGroup]="form">
+            <mat-form-field appearance="outline" hideRequiredMarker
+                            [ngClass]="{'errored-mat-form-field': form.controls.locationDescription.invalid && form.controls.locationDescription.touched}"
+            >
+              <mat-label>Ort Beschreibung</mat-label>
+              <input formControlName="locationDescription" matInput>
+              <mat-error
+                *ngIf="form.controls.locationDescription.invalid">{{checkError(form.controls.locationDescription, locationDescriptionError)}}</mat-error>
+
+            </mat-form-field>
+            <mat-form-field appearance="outline" hideRequiredMarker
+                            [ngClass]="{'errored-mat-form-field': form.controls.latitude.invalid && form.controls.latitude.touched}">
+              <mat-label>Längengrad</mat-label>
+              <input formControlName="latitude" matInput type="number">
+              <mat-error
+                *ngIf="form.controls.latitude.invalid">{{checkError(form.controls.latitude,latitudeErrors)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" hideRequiredMarker
+                            [ngClass]="{'errored-mat-form-field': form.controls.longitude.invalid && form.controls.longitude.touched}">
+              <mat-label>Breitengrad</mat-label>
+              <input formControlName="longitude" matInput type="number">
+              <mat-error
+                *ngIf="form.controls.longitude.invalid">{{checkError(form.controls.longitude, longitudeErrors)}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" hideRequiredMarker>
+              <mat-label>Edition</mat-label>
+              <mat-select formControlName="edition">
+                <mat-option [value]="'original'">😎 Original</mat-option>
+                <mat-option [value]="'original_with_earring'">👂 Original (mit Ohrring)</mat-option>
+                <mat-option [value]="'winter'">⛄️ Winter</mat-option>
+                <mat-option [value]="'train'">🚇 Zug</mat-option>
+                <mat-option [value]="'mail'">📮 Post</mat-option>
+                <mat-option [value]="'holiday'">🏝 Urlaub</mat-option>
+                <mat-option [value]="'other'">❓ Unbekannt</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="buttons">
+      <button mat-flat-button color="primary" (click)="onSaveClick()">Sticker Position eintragen</button>
+    </div>
+  </div>
+</app-nav>

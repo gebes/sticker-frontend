@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "localhost:8080"
+  baseUrl: "http://localhost:8080/",
+  mapsKey: "AIzaSyD7-OzK5enDpTpKFImJW-NJ5j75WNMNvPI"
 };
 
 /*

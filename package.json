@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@agm/core": "^3.0.0-beta.0",
+    "@agm/core": "^1.1.0",
     "@angular/animations": "^14.1.0",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
@@ -21,7 +21,10 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@types/googlemaps": "^3.39.13",
+    "agm-overlays": "^2.0.0",
     "http-status-codes": "^2.2.0",
+    "ngx-cookie": "^6.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

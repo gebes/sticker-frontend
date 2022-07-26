@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.disabled {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+$gray: #dadce0;
+
+.mat-card {
+  border: 1px solid $gray;
+  border-radius: 8px !important;
+  user-select: none;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.typography-caps{
+  font-size: 0.6875rem;
+  letter-spacing: 0.07272727em;
+  color: #5f6368;
+}
+
+
+.app-nav-mat-progress-bar{
+  position: absolute !important;
+  width: 100% !important;
+  top: 64px !important;
+  left: 0 !important;
+  height: 8px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 599px) {
+  .app-nav-mat-progress-bar{
+    top: 56px !important;
+  }
+}

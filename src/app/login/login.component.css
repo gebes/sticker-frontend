@@ -1,0 +1,22 @@
+
+app-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  margin-bottom: 0;
+}
+p{
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.wrapper{
+  padding-top: 32px;
+  width: 500px;
+}
+
+.mat-raised-button{
+  background-color: #4D1056;
+}

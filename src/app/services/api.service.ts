@@ -26,13 +26,14 @@ export class ApiService {
   }
 
   public async delete<T>(route: string, init: RequestInit = {}): Promise<T> {
-    return this.callApi(route, {method: "delete", ...init})
+    return this.callApi(route, {method: "DELETE", ...init})
   }
 
   private async callApi<T>(route: string, init: RequestInit = {}): Promise<T> {
     if (init.headers == null) {
       init.headers = this._defaultHeaderProvider()
     }
+    init.credentials = 'include'
     const result = await fetch(environment.baseUrl + route, init)
     const body = await result.json()
 

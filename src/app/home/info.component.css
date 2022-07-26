@@ -1,0 +1,9 @@
+mat-dialog-content{
+  min-width: 400px;
+}
+
+
+mat-dialog-actions{
+  display: flex;
+  justify-content: space-between;
+}

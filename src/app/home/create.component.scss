@@ -1,0 +1,56 @@
+app-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper{
+  max-width: 500px !important;
+}
+mat-form-field {
+  width: 100%;
+  transition: margin-bottom 250ms ease-in-out;
+  margin-bottom: -1em;
+}
+
+.errored-mat-form-field {
+  margin-bottom: 1em;
+}
+mat-card {
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+}
+
+.marker {
+  display: flex;
+  flex-direction: row;
+}
+.mat-flat-button{
+  background-color: #4D1056;
+}
+
+@media only screen and (max-width: 599px) {
+  .wrapper{
+    width: 100%;
+    max-width: 100% !important;
+  }
+  .mat-flat-button{
+    margin-right: 16px;
+  }
+  h1{
+    margin-leftx: 16px;
+  }
+  .marker {
+    mat-card {
+      border-radius: 0 !important;
+      border-left: none;
+      border-right: none;
+    }
+
+
+  }
+
+}

@@ -10,10 +10,16 @@ export class AuthGuardService implements CanActivate {
   }
 
   async canActivate(): Promise<boolean> {
-
+    if (!this.auth.isAuthenticated()) {
+      await this.router.navigate(['login']);
+      return false;
+    }
 
     try {
-      // const user = this.auth.user ?? (await this.auth.getUser())
+      const userP = this.auth.getUser()
+      const stickersP = this.auth.getStickers()
+      await userP
+      await stickersP
     } catch (e) {
       if (e instanceof InvalidResponseError) {
         if (e.status === StatusCodes.UNAUTHORIZED) {
