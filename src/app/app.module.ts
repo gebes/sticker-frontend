@@ -30,11 +30,11 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import {environment} from "../environments/environment";
 import {CookieModule, CookieService} from "ngx-cookie";
-import { LoginComponent } from './login/login.component';
-import { CreateComponent } from './home/create.component';
+import {LoginComponent} from './login/login.component';
+import {CreateComponent} from './home/create.component';
 import {NavComponent} from "./home/nav.component";
 import {AgmOverlays} from "agm-overlays";
-import { InfoComponent } from './home/info.component';
+import {InfoComponent} from './home/info.component';
 
 
 @NgModule({
@@ -74,7 +74,7 @@ import { InfoComponent } from './home/info.component';
     CookieModule.withOptions(),
     AgmOverlays
   ],
-  providers: [ApiService, AuthGuardService, UserService, MatSnackBar, SnackbarService, DateService,CookieService, {
+  providers: [ApiService, AuthGuardService, UserService, MatSnackBar, SnackbarService, DateService, CookieService, {
     provide: MAT_DATE_LOCALE,
     useValue: 'de-DE'
   }, {
