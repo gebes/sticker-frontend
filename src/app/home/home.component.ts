@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
     this.loadStickers()
   }
 
-
   async loadStickers() {
     if (this.loading) return
     this.loading = true
@@ -71,7 +70,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  async createSticker(event: MouseEvent) {
+  async createSticker(event: MouseEvent): Promise<void> {
+    if(this.map.zoom < 18)
+      return;
+
     await this.router.navigate(['/create'], {state: {coords: event.coords}})
   }
 

@@ -3,6 +3,5 @@
     <agm-overlay *ngFor="let marker of stickers()" [latitude]="marker.latitude" [longitude]="marker.longitude" (markerClick)="stickerClick(marker)">
       <p class="icon">{{stickerToEmoji(marker)}}</p>
     </agm-overlay>
-
   </agm-map>
 </app-nav>
