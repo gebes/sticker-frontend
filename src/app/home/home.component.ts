@@ -82,11 +82,11 @@ export class HomeComponent implements OnInit {
   stickerClick(sticker: Sticker) {
     let dialogRef = this.dialog.open(InfoComponent, {data: sticker});
     dialogRef.afterClosed().subscribe(async result => {
-      if (result == null) {
-        await this.deleteSticker(sticker)
-        await this.loadStickers()
+      if (result === null) {
+        await this.deleteSticker(sticker);
+        await this.loadStickers();
       }
-    })
+    });
   }
 
   async deleteSticker(sticker: Sticker) {
